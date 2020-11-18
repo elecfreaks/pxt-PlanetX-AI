@@ -8,7 +8,9 @@
     },
     "files": [
         "README.md",
-        "main.ts"
+        "main.ts",
+        "_locales/zh-CN/pxt-PlanetX-AI-strings.json",
+        "_locales/zh-CN/pxt-PlanetX-AI-jsdoc-strings.json"
     ],
     "testFiles": [
         "test.ts"
