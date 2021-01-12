@@ -221,9 +221,9 @@ namespace PlanetX_AILens {
     }
     export enum ballColorList{
         //% block="Red"
-        Red = 3,
+        Red = 2,
 		//% block="Blue"
-        Blue = 2
+        Blue = 1
     }
     /**
     * TODO: Waiting for module initialize.
@@ -231,11 +231,12 @@ namespace PlanetX_AILens {
     //% block="Initialize AI-Lens via IIC port"
     //% group="Basic" weight=100
     export function initModule():void{
-        let timeout = 0
+        let timeout = input.runningTime()
         while (!(pins.i2cReadNumber(CameraAdd, NumberFormat.Int8LE))) {
-            timeout++
-            if(timeout > 100){
-                basic.showString("Init AILens Error!")
+            if(input.runningTime() - timeout > 6000){ 
+                while(true){
+                    basic.showString("Init AILens Error!")
+                }
             }
         }   
     }
@@ -291,7 +292,7 @@ namespace PlanetX_AILens {
             return DataBuff[7]
         }
         else{
-            return null
+            return 0
         }
     }
     /**
@@ -324,7 +325,7 @@ namespace PlanetX_AILens {
             }
         }
         else {
-            return null
+            return 0
         }
     }
 
@@ -344,7 +345,7 @@ namespace PlanetX_AILens {
             return DataBuff[7]
         }
         else{
-            return null
+            return 0
         }
     }
     /**
@@ -377,11 +378,11 @@ namespace PlanetX_AILens {
                     return DataBuff[8]
                     break
                 default:
-                    return null
+                    return 0
             }
         }
         else {
-            return null
+            return 0
         }
     }
     /**
@@ -451,7 +452,7 @@ namespace PlanetX_AILens {
             return DataBuff[7]
         }
         else{
-            return null
+            return 0
         }
     }
     /**
@@ -481,11 +482,11 @@ namespace PlanetX_AILens {
                     return DataBuff[8]
                     break
                 default:
-                    return null
+                    return 0
             }
         }
         else
-            return null
+            return 0
     }
     /**
     * TODO: Judge whether there is a color in the screen
@@ -509,7 +510,7 @@ namespace PlanetX_AILens {
             return DataBuff[7]
         }
         else{
-            return null
+            return 0
         }
     }
     /**
@@ -539,11 +540,11 @@ namespace PlanetX_AILens {
                     return DataBuff[8]
                     break
                 default:
-                    return null
+                    return 0
             }
         }
         else {
-            return null
+            return 0
         }
     }
     /**
@@ -572,7 +573,7 @@ namespace PlanetX_AILens {
             }
         }
         else
-            return null
+            return 0
     }
     /**
     * TODO: line parameters in the screen
@@ -662,9 +663,9 @@ namespace PlanetX_AILens {
             }
             else
             {
-                return null
+                return 0
             }
         }
-    return null
+    return 0
     } 
 }
