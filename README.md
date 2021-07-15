@@ -1,31 +1,26 @@
+![](https://img.shields.io/badge/Plantfrom-Micro%3Abit-red) ![](https://img.shields.io/travis/com/elecfreaks/pxt-PlanetX-AI) ![](https://img.shields.io/github/v/release/elecfreaks/pxt-PlanetX-AI) ![](https://img.shields.io/github/last-commit/elecfreaks/pxt-PlanetX-AI) ![](https://img.shields.io/github/languages/top/elecfreaks/pxt-PlanetX-AI) ![](https://img.shields.io/github/issues/elecfreaks/pxt-PlanetX-AI) ![](https://img.shields.io/github/license/elecfreaks/pxt-PlanetX-AI) 
 
-> 在 [https://elecfreaks.github.io/pxt-planetx-ai/](https://elecfreaks.github.io/pxt-planetx-ai/) 打开此页面
+# AiLens Package
 
-## 用作扩展
+![](/image.jpg/)
 
-此仓库可以作为 **插件** 添加到 MakeCode 中。
+This extension is designed to programme and drive the AiLens.
 
-* 打开 [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* 点击 **新项目**
-* 点击齿轮图标菜单下的 **扩展**
-* 搜索 **https://github.com/elecfreaks/pxt-planetx-ai** 并导入
+The AI Lens is able to achieve the functions of face recognition, balls tracking, cards recognition and characteristics acquisition.
 
-## 编辑此项目 ![构建状态标志](https://github.com/elecfreaks/pxt-planetx-ai/workflows/MakeCode/badge.svg)
+## Get Product
 
-在 MakeCode 中编辑此仓库。
+You can [get AiLens from the Elecfreaks store](https://www.elecfreaks.com/elecfreaks-smart-ai-lens-kit.html)
 
-* 打开 [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* 点击 **导入**，然后点击 **导入 URL**
-* 粘贴 **https://github.com/elecfreaks/pxt-planetx-ai** 并点击导入
+## Use Tutorial
 
-## 积木块预览
+You can get a detailed tutorial on how to use it here [ELECFREAKS WIKI](
+https://elecfreaks.com/learn-en/microbitplanetX/ai/index.html)
 
-此图像显示主分支中最后一次提交的块代码。
-此图像可能需要几分钟才能刷新。
 
-![块的渲染视图](https://github.com/elecfreaks/pxt-planetx-ai/raw/master/.github/makecode/blocks.png)
+## Supported targets
+for PXT/microbit
 
-#### 元数据（用于搜索、渲染）
+## License
+MIT
 
-* for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
