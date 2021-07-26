@@ -226,7 +226,7 @@ namespace PlanetX_AILens {
         Blue = 1
     }
     /**
-    * TODO: Waiting for module initialize.
+    * Waiting for module initialize.
     */
     //% block="Initialize AI-Lens via IIC port"
     //% group="Basic" weight=100
@@ -241,7 +241,7 @@ namespace PlanetX_AILens {
         }   
     }
     /**
-    * TODO: Switch recognition objects.
+    * Switch recognition objects.
     * @param fun Function list eg: FuncList.Face
     */
     //% block="Switch function as %fun"
@@ -256,7 +256,7 @@ namespace PlanetX_AILens {
     }
 
     /**
-    * TODO: Get the image in a frame
+    * Get the image in a frame
     */
     //% block="Get one image from AI-Lens"
     //% group="Basic" weight=90
@@ -266,7 +266,7 @@ namespace PlanetX_AILens {
     }
 
     /**
-    * TODO: Judge the image contains a ball
+    * Judge the image contains a ball
     */
     //% block="Image contains ball(s)"
     //% group="Ball" weight=85
@@ -296,7 +296,7 @@ namespace PlanetX_AILens {
         }
     }
     /**
-    * TODO: In the image get ball(s)' info
+    * In the image get ball(s)' info
     */
     //% block="In the image get ball(s)' info: %status"
     //% status.fieldEditor="gridpicker"
@@ -331,7 +331,7 @@ namespace PlanetX_AILens {
 
 
     /**
-    * TODO: Judge whether there is a face in the picture
+    * Judge whether there is a face in the picture
     */
     //% block="Image contains a face"
     //% group="Face" weight=75
@@ -349,7 +349,7 @@ namespace PlanetX_AILens {
         }
     }
     /**
-    * TODO: Judge whether there is a face in the picture
+    * Judge whether there is a face in the picture
     * @param status Facestatus, eg: Facestatus.X
     */
     //% block="In the image get face(s)' info: %status"
@@ -386,7 +386,7 @@ namespace PlanetX_AILens {
         }
     }
     /**
-    * TODO: Judge whether there is a digital card in the screen
+    * Judge whether there is a digital card in the screen
     * @param status numberCards, eg: numberCards.1
     */
     //% block="Image contains number card(s): %status"
@@ -401,7 +401,7 @@ namespace PlanetX_AILens {
             return false
     }
     /**
-    * TODO: Judge whether there is a letter card in the screen
+    * Judge whether there is a letter card in the screen
     * @param status letterCards, eg: letterCards.A
     */
     //% block="Image contains letter card(s): %status"
@@ -416,7 +416,7 @@ namespace PlanetX_AILens {
             return false
     }
     /**
-    * TODO: Judge whether there is a traffic card in the screen
+    * Judge whether there is a traffic card in the screen
     * @param status trafficCards, eg: trafficCards.forward
     */
     //% block="Image contains traffic card(s): %status"
@@ -431,7 +431,7 @@ namespace PlanetX_AILens {
             return false
     }
     /**
-    * TODO: Judge whether there is a other card in the screen
+    * Judge whether there is a other card in the screen
     * @param status otherCards, eg: otherCards.cat
     */
     //% block="Image contains other card(s): %status"
@@ -456,7 +456,7 @@ namespace PlanetX_AILens {
         }
     }
     /**
-    * TODO: Card parameters in the screen
+    * Card parameters in the screen
     * @param status otherCards, eg: Cardstatus.X
     */
     //% block="In the image get Card(s)' info: %status"
@@ -489,7 +489,7 @@ namespace PlanetX_AILens {
             return 0
     }
     /**
-    * TODO: Judge whether there is a color in the screen
+    * Judge whether there is a color in the screen
     * @param status ColorLs, eg: ColorLs.red
     */
     //% block="Image contains color card(s): %status"
@@ -514,7 +514,7 @@ namespace PlanetX_AILens {
         }
     }
     /**
-    * TODO: color parameters in the screen
+    * color parameters in the screen
     * @param status Colorstatus, eg: Colorstatus.X
     */
     //% block="In the image get color card(s)' info: %status"
@@ -548,7 +548,7 @@ namespace PlanetX_AILens {
         }
     }
     /**
-    * TODO: line parameters in the screen
+    * line parameters in the screen
     * @param status Linestatus, eg: Linestatus.angle
     */
     //% block="In the image get line(s)' info: %status"
@@ -576,7 +576,7 @@ namespace PlanetX_AILens {
             return 0
     }
     /**
-    * TODO: line parameters in the screen
+    * line parameters in the screen
     * @param status Linestatus, eg: Linestatus.angle
     */
     //% block="Image contains line's direction towards %status"
@@ -624,7 +624,7 @@ namespace PlanetX_AILens {
     }
     
     /**
-    * TODO: Learn an object in a picture
+    * Learn an object in a picture
     * @param thingsID Edit a label for the object, eg: 1
     */
     //% block="Learn an object with: %thingsID"
@@ -638,7 +638,7 @@ namespace PlanetX_AILens {
         pins.i2cWriteBuffer(CameraAdd, thingsBuf)
     }
     /**
-    * TODO: Clear Learned Objects
+    * Clear Learned Objects
     */
     //% block="Clear learned objects"
     //% group="Learn" weight=15
@@ -649,7 +649,7 @@ namespace PlanetX_AILens {
         pins.i2cWriteBuffer(CameraAdd, thingsBuf)
     }
     /**
-    * TODO: Judge whether there are any learned objects in the picture
+    * Judge whether there are any learned objects in the picture
     */
     //% block="Image contains learned objects: %status"
     //% status.fieldEditor="gridpicker"
@@ -663,7 +663,7 @@ namespace PlanetX_AILens {
             return false
     }
     /**
-    * TODO: Judge whether there are any learned objects in the picture
+    * Judge whether there are any learned objects in the picture
     */
     //% block="In the image get learn object %thingsID Confidence"
     //% group="Learn" weight=10
