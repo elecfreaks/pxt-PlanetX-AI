@@ -1,5 +1,5 @@
 {
-    "name": "pxt-PlanetX-AI",
+    "name": "pxt-PlanetX-AILens",
     "version": "0.2.7",
     "description": "",
     "dependencies": {
@@ -18,7 +18,7 @@
     ],
     "public": true,
     "targetVersions": {
-        "target": "4.0.9",
+        "target": "4.0.11",
         "targetId": "microbit"
     },
     "supportedTargets": [
