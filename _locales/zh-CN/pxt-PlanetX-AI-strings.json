@@ -104,6 +104,7 @@
   "PlanetX_AILens|block": "行星X_AI",
   "PlanetX_AILens.delASRLearn|block": "语音识别传感器 IIC接口 恢复出厂设置",
   "PlanetX_AILens.setASRLearn|block": "语音识别传感器 IIC接口 进入学习模式",
+  "PlanetX_AILens.onASR|block": "语音识别传感器 IIC接口 听到 %vocabulary",
   "PlanetX_AILens.vocabularyList.Add_a_level|block": "增加一档",
   "PlanetX_AILens.vocabularyList.Avoid_object|block": "避障模式",
   "PlanetX_AILens.vocabularyList.Close_device|block": "停止设备",
