@@ -143,5 +143,7 @@
   "{id:group}Color": "颜色",
   "{id:group}Face": "人脸",
   "{id:group}Learn": "特征学习",
-  "{id:group}Tracking": "巡线"
+  "{id:group}Tracking": "巡线",
+  "{id:subcategory}Vision": "视觉",
+  "{id:subcategory}ASR": "语音"
 }

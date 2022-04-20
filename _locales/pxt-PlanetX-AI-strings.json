@@ -143,5 +143,7 @@
   "{id:group}Color": "Color",
   "{id:group}Face": "Face",
   "{id:group}Learn": "Learn",
-  "{id:group}Tracking": "Tracking"
+  "{id:group}Tracking": "Tracking",
+  "{id:subcategory}Vision": "Vision",
+  "{id:subcategory}ASR": "ASR"
 }
