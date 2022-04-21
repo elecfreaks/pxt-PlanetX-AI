@@ -1,7 +1,7 @@
 /**
  * This extension is designed to programme and drive the Smart AI Lens(二郎神)
  */
-//% color=#0031AF icon="\uf06e" 
+//% color=#00B1ED icon="\uf06e" 
 //% groups='["Basic", "Ball", "Face", "Card", "Color", "Tracking", "Learn"]'
 //% block="PlanetX_AI-Lens"
 namespace PlanetX_AILens {
@@ -293,7 +293,7 @@ namespace PlanetX_AILens {
     /**
     * TODO: Waiting for module initialize.
     */
-    //% block="Initialize AI-Lens via IIC port"
+    //% block="Initialize AI-Lens"
     //% group="Basic" weight=100 subcategory=Vision
     export function initModule():void{
         let timeout = input.runningTime()
@@ -751,7 +751,7 @@ namespace PlanetX_AILens {
     } 
     let asrEventId = 3500
     let lastvoc = 0
-    //% block="ASR sensor IIC port hear %vocabulary"
+    //% block="ASR sensor hear %vocabulary"
     //% subcategory=ASR group="IIC Port"
     //% vocabulary.fieldEditor="gridpicker" vocabulary.fieldOptions.columns=3
     export function onASR(vocabulary: vocabularyList, handler: () => void) {
@@ -767,12 +767,12 @@ namespace PlanetX_AILens {
             }
         })
     }
-    //% block="ASR sensor IIC port enter learning-model"
+    //% block="ASR sensor enter learning-model"
     //% subcategory=ASR group="IIC Port"
     export function setASRLearn(): void {
         pins.i2cWriteNumber(0x0B, 0x50, NumberFormat.Int8LE)
     }
-    //% block="ASR sensor IIC port factory reset"
+    //% block="ASR sensor clear learned entrys"
     //% subcategory=ASR group="IIC Port"
     export function delASRLearn(): void {
         pins.i2cWriteNumber(0x0B, 0x60, NumberFormat.Int8LE)
