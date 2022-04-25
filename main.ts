@@ -1,7 +1,7 @@
 /**
  * This extension is designed to programme and drive the Smart AI Lens(二郎神)
  */
-//% color=#00B1ED icon="\uf06e" 
+//% color=#0031AF icon="\uf06e" 
 //% groups='["Basic", "Ball", "Face", "Card", "Color", "Tracking", "Learn"]'
 //% block="PlanetX_AI-Lens"
 namespace PlanetX_AILens {
@@ -295,6 +295,7 @@ namespace PlanetX_AILens {
     */
     //% block="Initialize AI-Lens"
     //% group="Basic" weight=100 subcategory=Vision
+    //% color=#00B1ED
     export function initModule():void{
         let timeout = input.runningTime()
         while (!(pins.i2cReadNumber(CameraAdd, NumberFormat.Int8LE))) {
@@ -313,6 +314,7 @@ namespace PlanetX_AILens {
     //% fun.fieldEditor="gridpicker"
     //% fun.fieldOptions.columns=3
     //% group="Basic" weight=95 subcategory=Vision
+    //% color=#00B1ED
     export function switchfunc(fun: FuncList):void{
         let funcBuff = pins.i2cReadBuffer(CameraAdd, 9)
         funcBuff[0]=0x20
@@ -325,6 +327,7 @@ namespace PlanetX_AILens {
     */
     //% block="Get one image from AI-Lens"
     //% group="Basic" weight=90 subcategory=Vision
+    //% color=#00B1ED
     export function cameraImage(): void {
         DataBuff = pins.i2cReadBuffer(CameraAdd, 9)
         basic.pause(30)
@@ -335,6 +338,7 @@ namespace PlanetX_AILens {
     */
     //% block="Image contains ball(s)"
     //% group="Ball" weight=85 subcategory=Vision
+    //% color=#00B1ED
     export function checkBall(): boolean {
         return DataBuff[0] == 7
     }
@@ -342,6 +346,7 @@ namespace PlanetX_AILens {
     //% group="Ball" weight=84
     //% ballcolor.fieldEditor="gridpicker"
     //% ballcolor.fieldOptions.columns=2 subcategory=Vision
+    //% color=#00B1ED
     export function ballColor(ballcolor:ballColorList):boolean {
         if (DataBuff[0] == 7) {
             return ballcolor == DataBuff[1]
@@ -352,6 +357,7 @@ namespace PlanetX_AILens {
     }
     //% block="In the image get ball(s)' total"
     //% group="Ball" weight=83 subcategory=Vision
+    //% color=#00B1ED
     export function BallTotalNum():number{
         if (DataBuff[0] == 7) {
             return DataBuff[7]
@@ -367,6 +373,7 @@ namespace PlanetX_AILens {
     //% status.fieldEditor="gridpicker"
     //% status.fieldOptions.columns=3
     //% group="Ball" weight=80 subcategory=Vision
+    //% color=#00B1ED
     export function ballData(status: Ballstatus): number {
         if (DataBuff[0] == 7) {
             switch (status) {
@@ -400,11 +407,13 @@ namespace PlanetX_AILens {
     */
     //% block="Image contains a face"
     //% group="Face" weight=75 subcategory=Vision
+    //% color=#00B1ED
     export function checkFace(): boolean {
         return DataBuff[0] == 6
     }
     //% block="In the image get face(s)' total"
     //% group="Face" weight=74 subcategory=Vision
+    //% color=#00B1ED
     export function faceTotalNum():number{
         if (DataBuff[0] == 6) {
             return DataBuff[7]
@@ -421,6 +430,7 @@ namespace PlanetX_AILens {
     //% status.fieldEditor="gridpicker"
     //% status.fieldOptions.columns=3
     //% group="Face" weight=70 subcategory=Vision
+    //% color=#00B1ED
     export function faceData(status: Facestatus): number {
         if (DataBuff[0] == 6) {
             switch (status) {
@@ -458,6 +468,7 @@ namespace PlanetX_AILens {
     //% status.fieldEditor="gridpicker"
     //% status.fieldOptions.columns=3
     //% group="Card" weight=65 subcategory=Vision
+    //% color=#00B1ED
     export function numberCard(status:numberCards): boolean{
         if (DataBuff[0] == 2) {
             return status == DataBuff[1]
@@ -473,6 +484,7 @@ namespace PlanetX_AILens {
     //% status.fieldEditor="gridpicker"
     //% status.fieldOptions.columns=3
     //% group="Card" weight=60 subcategory=Vision
+    //% color=#00B1ED
     export function letterCard(status:letterCards): boolean{
         if (DataBuff[0] == 4) {
             return status == DataBuff[1]
@@ -488,6 +500,7 @@ namespace PlanetX_AILens {
     //% status.fieldEditor="gridpicker"
     //% status.fieldOptions.columns=3
     //% group="Card" weight=55 subcategory=Vision
+    //% color=#00B1ED
     export function trafficCard(status:trafficCards): boolean{
         if (DataBuff[0] == 3) {
             return status == DataBuff[1]
@@ -503,6 +516,7 @@ namespace PlanetX_AILens {
     //% status.fieldEditor="gridpicker"
     //% status.fieldOptions.columns=3
     //% group="Card" subcategory=Vision
+    //% color=#00B1ED
     export function otherCard(status:otherCards): boolean{
         if (DataBuff[0] == 3) {
             return status == DataBuff[1]
@@ -512,6 +526,7 @@ namespace PlanetX_AILens {
     }
     //% block="In the image get Card(s)' total"
     //% group="Card" weight=49 subcategory=Vision
+    //% color=#00B1ED
     export function cardTotalNum():number{
         if (DataBuff[0] == 2 || DataBuff[0] == 3 || DataBuff[0] == 4) {
             return DataBuff[7]
@@ -528,6 +543,7 @@ namespace PlanetX_AILens {
     //% status.fieldEditor="gridpicker"
     //% status.fieldOptions.columns=3
     //% group="Card" weight=45 subcategory=Vision
+    //% color=#00B1ED
     export function CardData(status: Cardstatus): number {
         if (DataBuff[0] == 2 || DataBuff[0] == 3 || DataBuff[0] == 4) {
             switch (status) {
@@ -561,6 +577,7 @@ namespace PlanetX_AILens {
     //% status.fieldEditor="gridpicker"
     //% status.fieldOptions.columns=3
     //% group="Color" weight=30 subcategory=Vision
+    //% color=#00B1ED
     export function colorCheck(status: ColorLs): boolean {
         if (DataBuff[0] == 9) {
             return status == DataBuff[1]
@@ -570,6 +587,7 @@ namespace PlanetX_AILens {
     }
     //% block="In the image get color card(s)' total"
     //% group="Color" weight=29 subcategory=Vision
+    //% color=#00B1ED
     export function colorTotalNum():number{
         if (DataBuff[0] == 9) {
             return DataBuff[7]
@@ -586,6 +604,7 @@ namespace PlanetX_AILens {
     //% status.fieldEditor="gridpicker"
     //% status.fieldOptions.columns=3
     //% group="Color" weight=25 subcategory=Vision
+    //% color=#00B1ED
     export function colorData(status: Colorstatus): number {
         if (DataBuff[0] == 9) {
             switch (status) {
@@ -621,6 +640,7 @@ namespace PlanetX_AILens {
     //% status.fieldOptions.columns=3
     //% group="Tracking"
     //% weight=35 subcategory=Vision
+    //% color=#00B1ED
     export function lineData(status: Linestatus): number {
         if (DataBuff[0] == 8) {
             switch (status) {
@@ -649,6 +669,7 @@ namespace PlanetX_AILens {
     //% status.fieldOptions.columns=2
     //% group="Tracking"
     //% weight=34 subcategory=Vision
+    //% color=#00B1ED
     export function lineDirection(status: LineTrend):boolean{
         if (DataBuff[0] == 8) {
             switch (status) {
@@ -696,6 +717,7 @@ namespace PlanetX_AILens {
     //% status.fieldEditor="gridpicker"
     //% status.fieldOptions.columns=3
     //% group="Learn" weight=20 subcategory=Vision
+    //% color=#00B1ED
     export function learnObject(thingsID: learnID): void {
         let thingsBuf = pins.createBuffer(9)
         thingsBuf[0] = 10
@@ -707,6 +729,7 @@ namespace PlanetX_AILens {
     */
     //% block="Clear learned objects"
     //% group="Learn" weight=15 subcategory=Vision
+    //% color=#00B1ED
     export function ClearlearnObject(): void {
         let thingsBuf = pins.createBuffer(9)
         thingsBuf[0] = 10
@@ -720,6 +743,7 @@ namespace PlanetX_AILens {
     //% status.fieldEditor="gridpicker"
     //% status.fieldOptions.columns=3
     //% group="Learn" weight=14 subcategory=Vision
+    //% color=#00B1ED
     export function objectCheck(status: learnID): boolean {
         if (DataBuff[0] == 10 && status == DataBuff[1]) {
             if (objectConfidence(status) >= 83){
@@ -737,6 +761,7 @@ namespace PlanetX_AILens {
     */
     //% block="In the image get learn object %thingsID Confidence"
     //% group="Learn" weight=10 subcategory=Vision
+    //% color=#00B1ED
     export function objectConfidence(thingsID: learnID): number{
         if (DataBuff[0] == 10 && DataBuff[2] < 30) {
             if(DataBuff[1] == thingsID){
@@ -754,6 +779,7 @@ namespace PlanetX_AILens {
     //% block="ASR sensor hear %vocabulary"
     //% subcategory=ASR group="IIC Port"
     //% vocabulary.fieldEditor="gridpicker" vocabulary.fieldOptions.columns=3
+    //% color=#00B1ED
     export function onASR(vocabulary: vocabularyList, handler: () => void) {
         control.onEvent(asrEventId, vocabulary, handler);
         control.inBackground(() => {
@@ -769,11 +795,13 @@ namespace PlanetX_AILens {
     }
     //% block="ASR sensor enter learning-model"
     //% subcategory=ASR group="IIC Port"
+    //% color=#00B1ED
     export function setASRLearn(): void {
         pins.i2cWriteNumber(0x0B, 0x50, NumberFormat.Int8LE)
     }
     //% block="ASR sensor clear learned entrys"
     //% subcategory=ASR group="IIC Port"
+    //% color=#00B1ED
     export function delASRLearn(): void {
         pins.i2cWriteNumber(0x0B, 0x60, NumberFormat.Int8LE)
     }
