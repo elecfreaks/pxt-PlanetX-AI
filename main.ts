@@ -227,7 +227,7 @@ namespace PlanetX_AILens {
     }
     /////////ASR
     export enum vocabularyList {
-        //% block="Hi,Shaun"
+        //% block="Hi, Shaun"
         Hi_Shaun = 1,
         //% block="Turn on lights" 
         Turn_on_lights = 16,
