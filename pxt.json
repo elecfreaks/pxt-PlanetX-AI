@@ -12,6 +12,7 @@
         "main.ts",
         "_locales/zh-CN/pxt-PlanetX-AI-strings.json",
         "_locales/zh-CN/pxt-PlanetX-AI-jsdoc-strings.json",
+        "_locales/ja/pxt-PlanetX-AI-strings.json",
 	"_locales/nb/pxt-PlanetX-AI-strings.json"
     ],
     "testFiles": [
