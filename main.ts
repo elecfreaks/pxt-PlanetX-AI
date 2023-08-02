@@ -269,7 +269,7 @@ namespace PlanetX_AILens {
         Execute_function_one = 49,
         //% block="Execute function two"
         Execute_function_two = 50,
-        //% block="Learning entry one"
+        //% block="Learning entry 1"
         Learning_entry_1 = 80,
         //% block="Learning entry 2"
         Learning_entry_2 = 81,
