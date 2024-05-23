@@ -13,14 +13,15 @@
         "_locales/zh-CN/pxt-PlanetX-AI-strings.json",
         "_locales/zh-CN/pxt-PlanetX-AI-jsdoc-strings.json",
         "_locales/ja/pxt-PlanetX-AI-strings.json",
-        "_locales/nb/pxt-PlanetX-AI-strings.json"
+        "_locales/nb/pxt-PlanetX-AI-strings.json",
+        "_locales/de/pxt-PlanetX-AI-strings.json"
     ],
     "testFiles": [
         "test.ts"
     ],
     "public": true,
     "targetVersions": {
-        "target": "4.0.18",
+        "target": "6.0.28",
         "targetId": "microbit"
     },
     "supportedTargets": [
