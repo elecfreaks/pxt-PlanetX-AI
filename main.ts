@@ -112,7 +112,7 @@ namespace PlanetX_AILens {
         //% block="Len"
         len = 3
     }
-    export enum LineTrend{
+    export enum LineTrend {
         //% block="Left"
         left,
         //% block="Right"
@@ -125,7 +125,7 @@ namespace PlanetX_AILens {
     /**
     * Number Cards List
     */
-    export enum numberCards{
+    export enum numberCards {
         //% block="0"
         zero = 1,
         //% block="1"
@@ -150,7 +150,7 @@ namespace PlanetX_AILens {
     /*
     * Letters Cards List
     */
-    export enum letterCards{
+    export enum letterCards {
         //% block="A"
         A = 1,
         //% block="B"
@@ -165,64 +165,64 @@ namespace PlanetX_AILens {
     /*
     * Traffic Cards List
     */
-    export enum trafficCards{
+    export enum trafficCards {
         //% block="Forward"
         forward = 18,
-		//% block="Back"
+        //% block="Back"
         back = 20,
-		//% block="Stop"
+        //% block="Stop"
         stop = 19,
-		//% block="Turn left"
+        //% block="Turn left"
         turnleft = 16,
-		//% block="Turn right"
+        //% block="Turn right"
         turnright = 17
     }
     /*
     * Other Cards List
     */
-    export enum otherCards{
+    export enum otherCards {
         //% block="Mouse"
         mouse = 1,
-		//% block="micro:bit"
+        //% block="micro:bit"
         microbit = 2,
-		//% block="Ruler"
+        //% block="Ruler"
         ruler = 3,
-		//% block="Cat"
+        //% block="Cat"
         cat = 4,
-		//% block="Pear"
+        //% block="Pear"
         pear = 5,
-		//% block="Ship"
+        //% block="Ship"
         ship = 6,
-		//% block="Apple"
+        //% block="Apple"
         apple = 7,
-		//% block="Car"
+        //% block="Car"
         car = 8,
-		//% block="Pen"
+        //% block="Pen"
         pen = 9,
-		//% block="Dog"
+        //% block="Dog"
         dog = 10,
-		//% block="Umbrella"
+        //% block="Umbrella"
         umbrella = 11,
-		//% block="Airplane"
+        //% block="Airplane"
         airplane = 12,
-		//% block="Clock"
+        //% block="Clock"
         clock = 13,
-		//% block="Grape"
+        //% block="Grape"
         grape = 14,
-		//% block="Cup"
+        //% block="Cup"
         cup = 15
     }
-    export enum learnID{
+    export enum learnID {
         ID1 = 1,
         ID2 = 2,
         ID3 = 3,
         ID4 = 4,
         ID5 = 5
     }
-    export enum ballColorList{
+    export enum ballColorList {
         //% block="Red"
         Red = 2,
-		//% block="Blue"
+        //% block="Blue"
         Blue = 1
     }
     /////////ASR
@@ -296,15 +296,15 @@ namespace PlanetX_AILens {
     //% block="Initialize AI-Lens"
     //% group="Basic" weight=100 subcategory=Vision
     //% color=#00B1ED
-    export function initModule():void{
+    export function initModule(): void {
         let timeout = input.runningTime()
         while (!(pins.i2cReadNumber(CameraAdd, NumberFormat.Int8LE))) {
-            if(input.runningTime() - timeout > 30000){ 
-                while(true){
+            if (input.runningTime() - timeout > 30000) {
+                while (true) {
                     basic.showString("Init AILens Error!")
                 }
             }
-        }   
+        }
     }
     /**
     * TODO: Switch recognition objects.
@@ -315,10 +315,10 @@ namespace PlanetX_AILens {
     //% fun.fieldOptions.columns=3
     //% group="Basic" weight=95 subcategory=Vision
     //% color=#00B1ED
-    export function switchfunc(fun: FuncList):void{
+    export function switchfunc(fun: FuncList): void {
         let funcBuff = pins.i2cReadBuffer(CameraAdd, 9)
-        funcBuff[0]=0x20
-        funcBuff[1]=fun
+        funcBuff[0] = 0x20
+        funcBuff[1] = fun
         pins.i2cWriteBuffer(CameraAdd, funcBuff)
     }
 
@@ -347,22 +347,22 @@ namespace PlanetX_AILens {
     //% ballcolor.fieldEditor="gridpicker"
     //% ballcolor.fieldOptions.columns=2 subcategory=Vision
     //% color=#00B1ED
-    export function ballColor(ballcolor:ballColorList):boolean {
+    export function ballColor(ballcolor: ballColorList): boolean {
         if (DataBuff[0] == 7) {
             return ballcolor == DataBuff[1]
         }
-        else{
+        else {
             return false
         }
     }
     //% block="In the image get ball(s)' total"
     //% group="Ball" weight=83 subcategory=Vision
     //% color=#00B1ED
-    export function BallTotalNum():number{
+    export function BallTotalNum(): number {
         if (DataBuff[0] == 7) {
             return DataBuff[7]
         }
-        else{
+        else {
             return 0
         }
     }
@@ -387,7 +387,7 @@ namespace PlanetX_AILens {
                     return DataBuff[4]
                     break
                 case Ballstatus.Confidence:
-                    return 100-DataBuff[6]
+                    return 100 - DataBuff[6]
                     break
                 case Ballstatus.ID:
                     return DataBuff[8]
@@ -414,11 +414,11 @@ namespace PlanetX_AILens {
     //% block="In the image get face(s)' total"
     //% group="Face" weight=74 subcategory=Vision
     //% color=#00B1ED
-    export function faceTotalNum():number{
+    export function faceTotalNum(): number {
         if (DataBuff[0] == 6) {
             return DataBuff[7]
         }
-        else{
+        else {
             return 0
         }
     }
@@ -469,7 +469,7 @@ namespace PlanetX_AILens {
     //% status.fieldOptions.columns=3
     //% group="Card" weight=65 subcategory=Vision
     //% color=#00B1ED
-    export function numberCard(status:numberCards): boolean{
+    export function numberCard(status: numberCards): boolean {
         if (DataBuff[0] == 2) {
             return status == DataBuff[1]
         }
@@ -485,7 +485,7 @@ namespace PlanetX_AILens {
     //% status.fieldOptions.columns=3
     //% group="Card" weight=60 subcategory=Vision
     //% color=#00B1ED
-    export function letterCard(status:letterCards): boolean{
+    export function letterCard(status: letterCards): boolean {
         if (DataBuff[0] == 4) {
             return status == DataBuff[1]
         }
@@ -501,7 +501,7 @@ namespace PlanetX_AILens {
     //% status.fieldOptions.columns=3
     //% group="Card" weight=55 subcategory=Vision
     //% color=#00B1ED
-    export function trafficCard(status:trafficCards): boolean{
+    export function trafficCard(status: trafficCards): boolean {
         if (DataBuff[0] == 3) {
             return status == DataBuff[1]
         }
@@ -517,7 +517,7 @@ namespace PlanetX_AILens {
     //% status.fieldOptions.columns=3
     //% group="Card" subcategory=Vision
     //% color=#00B1ED
-    export function otherCard(status:otherCards): boolean{
+    export function otherCard(status: otherCards): boolean {
         if (DataBuff[0] == 3) {
             return status == DataBuff[1]
         }
@@ -527,11 +527,11 @@ namespace PlanetX_AILens {
     //% block="In the image get Card(s)' total"
     //% group="Card" weight=49 subcategory=Vision
     //% color=#00B1ED
-    export function cardTotalNum():number{
+    export function cardTotalNum(): number {
         if (DataBuff[0] == 2 || DataBuff[0] == 3 || DataBuff[0] == 4) {
             return DataBuff[7]
         }
-        else{
+        else {
             return 0
         }
     }
@@ -557,7 +557,7 @@ namespace PlanetX_AILens {
                     return DataBuff[4]
                     break
                 case Cardstatus.Confidence:
-                    return 100-DataBuff[6]
+                    return 100 - DataBuff[6]
                     break
                 case Cardstatus.ID:
                     return DataBuff[8]
@@ -588,11 +588,11 @@ namespace PlanetX_AILens {
     //% block="In the image get color card(s)' total"
     //% group="Color" weight=29 subcategory=Vision
     //% color=#00B1ED
-    export function colorTotalNum():number{
+    export function colorTotalNum(): number {
         if (DataBuff[0] == 9) {
             return DataBuff[7]
         }
-        else{
+        else {
             return 0
         }
     }
@@ -618,7 +618,7 @@ namespace PlanetX_AILens {
                     return DataBuff[4]
                     break
                 case Colorstatus.Confidence:
-                    return 100-DataBuff[6]
+                    return 100 - DataBuff[6]
                     break
                 case Colorstatus.ID:
                     return DataBuff[8]
@@ -670,45 +670,45 @@ namespace PlanetX_AILens {
     //% group="Tracking"
     //% weight=34 subcategory=Vision
     //% color=#00B1ED
-    export function lineDirection(status: LineTrend):boolean{
+    export function lineDirection(status: LineTrend): boolean {
         if (DataBuff[0] == 8) {
             switch (status) {
                 case LineTrend.none:
                     return false
                     break
                 case LineTrend.left:
-                    if(DataBuff[2] < 90){
+                    if (DataBuff[2] < 90) {
                         return true
                     }
-                    else{
+                    else {
                         return false
                     }
                     break
                 case LineTrend.right:
-                    if(DataBuff[2] > 130){
+                    if (DataBuff[2] > 130) {
                         return true
                     }
-                    else{
+                    else {
                         return false
                     }
                     break
                 case LineTrend.front:
-                    if(DataBuff[2] > 90 && DataBuff[2] < 130){
+                    if (DataBuff[2] > 90 && DataBuff[2] < 130) {
                         return true
                     }
-                    else{
+                    else {
                         return false
                     }
                     break
             }
         }
-        else{
-            if(status==LineTrend.none)
+        else {
+            if (status == LineTrend.none)
                 return true
         }
         return false
     }
-    
+
     /**
     * TODO: Learn an object in a picture
     * @param thingsID Edit a label for the object, eg: 1
@@ -746,10 +746,10 @@ namespace PlanetX_AILens {
     //% color=#00B1ED
     export function objectCheck(status: learnID): boolean {
         if (DataBuff[0] == 10 && status == DataBuff[1]) {
-            if (objectConfidence(status) >= 83){
+            if (objectConfidence(status) >= 83) {
                 return true
             }
-            else{
+            else {
                 return false
             }
         }
@@ -762,36 +762,40 @@ namespace PlanetX_AILens {
     //% block="In the image get learn object %thingsID Confidence"
     //% group="Learn" weight=10 subcategory=Vision
     //% color=#00B1ED
-    export function objectConfidence(thingsID: learnID): number{
+    export function objectConfidence(thingsID: learnID): number {
         if (DataBuff[0] == 10 && DataBuff[2] < 30) {
-            if(DataBuff[1] == thingsID){
-                return 100-DataBuff[2]
+            if (DataBuff[1] == thingsID) {
+                return 100 - DataBuff[2]
             }
-            else
-            {
+            else {
                 return 0
             }
         }
-    return 0
-    } 
+        return 0
+    }
     let asrEventId = 3500
     let lastvoc = 0
+    let vocInitFlag = 0
     //% block="ASR sensor hear %vocabulary"
     //% subcategory=ASR group="IIC Port"
     //% vocabulary.fieldEditor="gridpicker" vocabulary.fieldOptions.columns=3
     //% color=#00B1ED
     export function onASR(vocabulary: vocabularyList, handler: () => void) {
         control.onEvent(asrEventId, vocabulary, handler);
-        control.inBackground(() => {
-            while (true) {
-                const voc = pins.i2cReadNumber(0x0B, 1)
-                if (voc != lastvoc) {
-                    lastvoc = voc
-                    control.raiseEvent(asrEventId, lastvoc);
+        if (!vocInitFlag) {
+            vocInitFlag = 1;
+            control.inBackground(() => {
+                while (true) {
+                    const voc = pins.i2cReadNumber(0x0B, 1)
+                    if (voc != lastvoc) {
+                        lastvoc = voc
+                        control.raiseEvent(asrEventId, lastvoc);
+                    }
+                    basic.pause(50);
                 }
-                basic.pause(50);
-            }
-        })
+            })
+        }
+
     }
     //% block="ASR sensor enter learning-model"
     //% subcategory=ASR group="IIC Port"
