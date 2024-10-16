@@ -308,7 +308,7 @@ namespace PlanetX_AILens {
     }
     /**
     * TODO: Switch recognition objects.
-    * @param fun Function list eg: FuncList.Face
+    * @param fun Function list 
     */
     //% block="Switch function as %fun"
     //% fun.fieldEditor="gridpicker"
@@ -424,7 +424,7 @@ namespace PlanetX_AILens {
     }
     /**
     * TODO: Judge whether there is a face in the picture
-    * @param status Facestatus, eg: Facestatus.X
+    * @param status Facestatus
     */
     //% block="In the image get face(s)' info: %status"
     //% status.fieldEditor="gridpicker"
@@ -462,7 +462,7 @@ namespace PlanetX_AILens {
     }
     /**
     * TODO: Judge whether there is a digital card in the screen
-    * @param status numberCards, eg: numberCards.1
+    * @param status numberCards
     */
     //% block="Image contains number card(s): %status"
     //% status.fieldEditor="gridpicker"
@@ -478,7 +478,7 @@ namespace PlanetX_AILens {
     }
     /**
     * TODO: Judge whether there is a letter card in the screen
-    * @param status letterCards, eg: letterCards.A
+    * @param status letterCards
     */
     //% block="Image contains letter card(s): %status"
     //% status.fieldEditor="gridpicker"
@@ -494,7 +494,7 @@ namespace PlanetX_AILens {
     }
     /**
     * TODO: Judge whether there is a traffic card in the screen
-    * @param status trafficCards, eg: trafficCards.forward
+    * @param status trafficCards
     */
     //% block="Image contains traffic card(s): %status"
     //% status.fieldEditor="gridpicker"
@@ -510,7 +510,7 @@ namespace PlanetX_AILens {
     }
     /**
     * TODO: Judge whether there is a other card in the screen
-    * @param status otherCards, eg: otherCards.cat
+    * @param status otherCards
     */
     //% block="Image contains other card(s): %status"
     //% status.fieldEditor="gridpicker"
@@ -537,7 +537,7 @@ namespace PlanetX_AILens {
     }
     /**
     * TODO: Card parameters in the screen
-    * @param status otherCards, eg: Cardstatus.X
+    * @param status otherCards
     */
     //% block="In the image get Card(s)' info: %status"
     //% status.fieldEditor="gridpicker"
@@ -571,7 +571,7 @@ namespace PlanetX_AILens {
     }
     /**
     * TODO: Judge whether there is a color in the screen
-    * @param status ColorLs, eg: ColorLs.red
+    * @param status ColorLs
     */
     //% block="Image contains color card(s): %status"
     //% status.fieldEditor="gridpicker"
@@ -598,7 +598,7 @@ namespace PlanetX_AILens {
     }
     /**
     * TODO: color parameters in the screen
-    * @param status Colorstatus, eg: Colorstatus.X
+    * @param status Colorstatus
     */
     //% block="In the image get color card(s)' info: %status"
     //% status.fieldEditor="gridpicker"
@@ -633,7 +633,7 @@ namespace PlanetX_AILens {
     }
     /**
     * TODO: line parameters in the screen
-    * @param status Linestatus, eg: Linestatus.angle
+    * @param status Linestatus
     */
     //% block="In the image get line(s)' info: %status"
     //% status.fieldEditor="gridpicker"
@@ -662,7 +662,7 @@ namespace PlanetX_AILens {
     }
     /**
     * TODO: line parameters in the screen
-    * @param status Linestatus, eg: Linestatus.angle
+    * @param status Linestatus
     */
     //% block="Image contains line's direction towards %status"
     //% status.fieldEditor="gridpicker"
@@ -711,7 +711,7 @@ namespace PlanetX_AILens {
 
     /**
     * TODO: Learn an object in a picture
-    * @param thingsID Edit a label for the object, eg: 1
+    * @param thingsID Edit a label for the object
     */
     //% block="Learn an object with: %thingsID"
     //% status.fieldEditor="gridpicker"
