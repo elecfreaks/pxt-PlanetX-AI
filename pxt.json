@@ -1,6 +1,6 @@
 {
     "name": "pxt-PlanetX-AI",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -21,7 +21,7 @@
     ],
     "public": true,
     "targetVersions": {
-        "target": "6.0.28",
+        "target": "4.0.18",
         "targetId": "microbit"
     },
     "supportedTargets": [
