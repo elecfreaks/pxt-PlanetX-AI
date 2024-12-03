@@ -56,7 +56,7 @@
     "PlanetX_AILens.faceData|block": "사진 속 얼굴 정보: %status",
     "PlanetX_AILens.faceTotalNum|block": "사진 속 얼굴 개수",
     "PlanetX_AILens.initModule|block": "AI 렌즈 초기화",
-    "PlanetX_AILens.learnObject|block": "와 함께 객체 학습시키기：%tingsID",
+    "PlanetX_AILens.learnObject|block": "와 함께 객체 학습시키기: %thingsID",
     "PlanetX_AILens.letterCards.A|block": "A",
     "PlanetX_AILens.letterCards.B|block": "B",
     "PlanetX_AILens.letterCards.C|block": "C",
