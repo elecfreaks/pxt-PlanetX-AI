@@ -13,7 +13,8 @@
         "_locales/zh-CN/pxt-PlanetX-AI-jsdoc-strings.json",
         "_locales/ja/pxt-PlanetX-AI-strings.json",
         "_locales/nb/pxt-PlanetX-AI-strings.json",
-        "_locales/de/pxt-PlanetX-AI-strings.json"
+        "_locales/de/pxt-PlanetX-AI-strings.json",
+        "_locales/ko/pxt-PlanetX-AI-strings.json"
     ],
     "testFiles": [
         "test.ts"
