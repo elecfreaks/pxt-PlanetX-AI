@@ -62,7 +62,7 @@
     "PlanetX_AILens.letterCards.C|block": "C",
     "PlanetX_AILens.letterCards.D|block": "D",
     "PlanetX_AILens.letterCards.E|block": "E",
-    "PlanetX_AILens.letterCard|block": "글자 카드를 포함한 사진: %stauts",
+    "PlanetX_AILens.letterCard|block": "글자 카드를 포함한 사진: %status",
     "PlanetX_AILens.lineData|block": "사진 속 라인 정보: %status",
     "PlanetX_AILens.lineDirection|block": "%status를 항햔 라인 방향을 포함한 사진",
     "PlanetX_AILens.numberCards.eight|block": "8",
