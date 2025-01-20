@@ -14,7 +14,8 @@
         "_locales/ja/pxt-PlanetX-AI-strings.json",
         "_locales/nb/pxt-PlanetX-AI-strings.json",
         "_locales/de/pxt-PlanetX-AI-strings.json",
-        "_locales/ko/pxt-PlanetX-AI-strings.json"
+        "_locales/ko/pxt-PlanetX-AI-strings.json",
+        "_locales/fr/pxt-PlanetX-AI-strings.json"
     ],
     "testFiles": [
         "test.ts"
