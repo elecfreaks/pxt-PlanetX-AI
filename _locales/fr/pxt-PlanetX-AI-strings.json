@@ -109,7 +109,7 @@
   "PlanetX_AILens.vocabularyList.Learning_entry_10|block": "Entrée d'apprentissage 10",
   "PlanetX_AILens|block": "PlanetX_AI-Lens",
   "PlanetX_AILens.initModule|block": "Initialiser AI-Lens",
-  "PlanetX_AILens.switchfunc|block": "Basculer la fonction en %fun",
+  "PlanetX_AILens.switchfunc|block": "Définir caméra en %fun",
   "PlanetX_AILens.cameraImage|block": "Obtenir une image de AI-Lens",
   "PlanetX_AILens.checkBall|block": "Image contient des balles",
   "PlanetX_AILens.ballColor|block": "Image contient une balle %ballcolor",
@@ -144,6 +144,6 @@
   "{id:group}Face": "Visage",
   "{id:group}Learn": "Apprendre",
   "{id:group}Tracking": "Suivi",
-  "{id:subcategory}Vision": "Vision",
+  "{id:subcategory}Vision": "Caméra",
   "{id:subcategory}ASR": "ASR"
 }
