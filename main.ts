@@ -1,5 +1,5 @@
 /**
- * This extension is designed to programme and drive the Smart AI Lens.
+ * This extension is designed to programme and drive the Smart AI Lens(二郎神)
  */
 //% color=#0031AF icon="\uf06e" 
 //% groups='["Basic", "Ball", "Face", "Card", "Color", "Tracking", "Learn", "Basic settings", "Ball recognition", "Card recognition", "Code recognition", "Color recognition", "Face recognition", "Expression recognition", "Gesture recognition", "Posture recognition", "Object recognition", "Object tracking", "Line recognition", "OCR", "Self learning", "Rhythm recognition", "IIC Port"]'
